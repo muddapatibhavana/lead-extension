@@ -25,3 +25,4 @@ A high-performance Manifest V3 Chrome Extension that parses Google Search result
 - `popup.html` & `popup.js` - Extension popup UI with search filter, manual scrape trigger, and CSV export.
 - `options.html` & `options.js` - Config settings for pattern generators and auto-scroll observers.
 "# lead-extension" 
+"# lead-extension" 

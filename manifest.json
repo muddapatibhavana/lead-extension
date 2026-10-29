@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Professional Lead & Contact Extractor",
+  "version": "1.0.0",
+  "description": "Extract professional profile contacts, job titles, companies, LinkedIn links, and emails directly from Google Search and LinkedIn results.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.google.com/search*",
+    "https://*.google.com/search*",
+    "https://www.linkedin.com/*",
+    "https://*.linkedin.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.google.com/search*",
+        "https://*.google.com/search*",
+        "https://www.linkedin.com/*",
+        "https://*.linkedin.com/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Lead Extractor"
+  },
+  "options_page": "options.html"
+}
